@@ -1,6 +1,5 @@
 function buildMetadata(sample) {
 
-  // @TODO: Complete the following function that builds the metadata panel
 
   // Use `d3.json` to fetch the metadata for a sample
   d3.json(`/metadata/${sample}`).then((data) => { 
@@ -33,7 +32,7 @@ function buildCharts(sample) {
       margin: {b:0, l:30},
       hovermode: "closests",
       xaxis: {title: "OTU ID"},
-      title: "BB" + sample + "'s OTU  Volume & Spread",
+      title: sample + "'s OTU  Volume & Spread",
       showLegend: false
     }
 
@@ -72,12 +71,12 @@ function buildCharts(sample) {
       type:"pie",
       textinfo: 'percent',
       hovertext: otu_ids.slice(0,10),
-      hoverinfo: 'label + hovertext + value'
+      hoverinfo: 'hovertext + value'
     }
   ];
 
     let pieLayout = {
-    title: "BB-" + sample + "'s Top OTU Microbiomes",
+    title: sample + "'s Top OTU Microbiomes",
     margin: {t:30, l:10}
   };
 
