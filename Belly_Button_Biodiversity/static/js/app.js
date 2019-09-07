@@ -31,7 +31,10 @@ function buildCharts(sample) {
     let bubbleLayout = {
       margin: {b:50, l:50},
       hovermode: "closests",
-      xaxis: {title: "OTU ID"},
+      xaxis: {title: 
+        {text: "OTU ID",
+         color: "blue",
+         weight: "bold"}},
       yaxis: {title: "Value"},
       title: {
         text: "Sample " + sample + "'s OTU  Volume & Spread",
