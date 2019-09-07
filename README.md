@@ -2,33 +2,33 @@
 
 ![Bacteria by filterforge.com](Images/bacteria_by_filterforgedotcom.jpg)
 
-In this assignment, you will build an interactive dashboard to explore the [Belly Button Biodiversity DataSet](http://robdunnlab.com/projects/belly-button-biodiversity/).
+This project is to build an interactive dashboard to explore the [Belly Button Biodiversity DataSet](http://robdunnlab.com/projects/belly-button-biodiversity/).
 
 ## Step 1 - Plotly.js
 
-Use Plotly.js to build interactive charts for your dashboard.
+Plotly.js was utilizied to build interactive charts for the dashboard.
 
-* Create a PIE chart that uses data from your samples route (`/samples/<sample>`) to display the top 10 samples.
+* PIE chart was created from the data from samples route (`/samples/<sample>`) to display the top 10 samples.
 
-  * Use `sample_values` as the values for the PIE chart.
+  * `sample_values` as the values for the PIE chart.
 
-  * Use `otu_ids` as the labels for the pie chart.
+  * `otu_ids` as the labels for the pie chart.
 
-  * Use `otu_labels` as the hovertext for the chart.
+  * `otu_labels` as the hovertext for the chart.
 
   ![PIE Chart](Images/pie_chart.png)
 
-* Create a Bubble Chart that uses data from your samples route (`/samples/<sample>`) to display each sample.
+* A Bubble Chart was created from the data from samples route (`/samples/<sample>`) to display each sample.
 
-  * Use `otu_ids` for the x values.
+  * `otu_ids` for the x values.
 
-  * Use `sample_values` for the y values.
+  * `sample_values` for the y values.
 
-  * Use `sample_values` for the marker size.
+  * `sample_values` for the marker size.
 
-  * Use `otu_ids` for the marker colors.
+  * `otu_ids` for the marker colors.
 
-  * Use `otu_labels` for the text values.
+  * `otu_labels` for the text values.
 
   ![Bubble Chart](Images/bubble_chart.png)
 

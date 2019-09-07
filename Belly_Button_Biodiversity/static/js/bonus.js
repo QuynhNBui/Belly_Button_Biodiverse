@@ -56,6 +56,7 @@ function buildGauge(WFREQ) {
     ]
 
     var layout = {
+        margin: {t:50},
         shapes: [
             {
                 type: "path",
@@ -66,7 +67,13 @@ function buildGauge(WFREQ) {
                 }
             }
         ],
-        title: "Belly Button Washing Frequency <br> Scrubs per Week",
+        title: {
+            text: "Belly Button Washing Frequency <br> Scrubs per Week",
+            font: {
+                size: 24,
+                color: "blue"
+            },
+        },
         height: 500,
         width: 500,
         xaxis: {

@@ -29,19 +29,27 @@ function buildCharts(sample) {
     const sample_values = data.sample_values;
 
     let bubbleLayout = {
-      margin: {b:0, l:30},
+      margin: {b:50, l:50},
       hovermode: "closests",
       xaxis: {title: "OTU ID"},
-      title: sample + "'s OTU  Volume & Spread",
-      showLegend: false
+      yaxis: {title: "Value"},
+      title: {
+        text: "Sample " + sample + "'s OTU  Volume & Spread",
+        font: {
+          size: 24, 
+          color: "blue",
+          style: "bold"},
+        },
+
+      showLegend: true
     }
 
     let bubbleData = [
       {
         x: otu_ids,
         y: sample_values,
-        text: otu_labels,
-        hoverinfo: "x + y + text",
+        hovertext: otu_labels,
+        hoverinfo: "hovertext",
         mode: "markers",
         marker: {
           size: sample_values,
@@ -69,15 +77,20 @@ function buildCharts(sample) {
       marker: {colorscale:"Viridis"},
       hole: 0.3,
       type:"pie",
-      textinfo: 'percent',
-      hovertext: otu_ids.slice(0,10),
-      hoverinfo: 'hovertext + value'
+      hovertext: otu_labels.slice(0,10),
+      hoverinfo: "hovertext"
     }
   ];
 
     let pieLayout = {
-    title: sample + "'s Top OTU Microbiomes",
-    margin: {t:30, l:10}
+    title: {
+      text: "Sample " + sample + "'s Top OTU Microbiomes",
+      font: {
+        size: 24,
+        color: "blue",
+        style: "bold"}, 
+      },
+    margin: {t:50, l:20}
   };
 
   Plotly.newPlot("pie", pieData, pieLayout);
